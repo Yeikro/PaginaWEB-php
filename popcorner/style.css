@@ -1,0 +1,155 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --ligth-gray: #bebebe;
+  --ligther-gray: #e6e2e2;
+  --blue: #4f8be4;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "main main main main";
+}
+
+header {
+  grid-area: header;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+main {
+  grid-area: main;
+}
+
+
+.search-and-buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.search-bar input {
+  height: 30px;
+  border: none;
+  width: 80%;
+  border-bottom: 1px solid var(--ligth-gray);
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.filter-button, .search-bar button {
+  background-color: white;
+  width: 100px;
+  height: 30px;
+  border: 1px solid var(--ligth-gray);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.search-bar button {
+  background-color: var(--blue);
+  border: none;
+  color: white;
+}
+
+.movies-container {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 30px;
+}
+
+.movie-item {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 450px;
+  box-shadow: 0px 0px 6px var(--ligther-gray);
+  border-radius: 10px;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.content {
+  padding: 10px 15px;
+}
+
+.movie-info {
+  display: flex;
+  justify-content: flex-start;
+  margin:  10px 0;
+}
+
+.content h4 {
+  font-size: 30px;
+  color: gray;
+  font-weight: lighter;
+}
+
+.score-wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.score-wrapper img {
+  width: 14px;
+  height: 14px;
+}
+
+.score, .genre {
+  color: var(--ligther-gray);
+}
+
+
+.plot {
+  color: var(--ligth-gray);
+  margin-top: 16px;
+  font-weight: bold;
+}
+
+.score {
+  padding-left: 10px;
+}
