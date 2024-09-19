@@ -22,7 +22,22 @@ body {
   grid-template-areas:
     "header header header header"
     "main main main main"
-    "main main main main";
+    "footer footer footer footer";
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('assets/netflix-wallpaper.webp') no-repeat center center/cover;
+  z-index: -1;
+  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.5); /* Para dar un tono oscuro a la imagen */
 }
 
 header {
@@ -31,12 +46,28 @@ header {
   display: flex;
   align-items: center;
   padding-left: 20px;
+  background-color: var(--blue);
+  color: white;
+  gap: 100px;
 }
 
 main {
   grid-area: main;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
+footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--blue);
+  position: relative;
+  margin-top: auto;
+}
 
 .search-and-buttons-container {
   display: flex;
@@ -114,6 +145,7 @@ main {
 
 .content {
   padding: 10px 15px;
+  color: rgb(0, 0, 0);
 }
 
 .movie-info {
@@ -152,4 +184,82 @@ main {
 
 .score {
   padding-left: 10px;
+}
+
+
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--blue);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0px 0px 10px var(--ligther-gray);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-container input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--ligth-gray);
+  border-radius: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.login-container button {
+  width: calc(50% - 10px);
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  background-color: var(--blue);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.navbar {
+  margin-top: 0px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: var(--dark-blue);
 }
