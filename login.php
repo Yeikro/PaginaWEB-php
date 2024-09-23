@@ -15,7 +15,7 @@
     <main>
         <div class="login-container">
             <h2>Inicia sesión o regístrate</h2>
-            <form action="login.php" method="post">
+            <form action="menu.php" method="post">
                 <input type="text" name="username" placeholder="Nombre de usuario" required>
                 <input type="password" name="password" placeholder="Contraseña" required>
                 <div class="button-container">
