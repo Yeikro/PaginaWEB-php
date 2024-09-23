@@ -25,7 +25,6 @@ body {
     "footer footer footer footer";
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
 }
 
 .background-overlay {
