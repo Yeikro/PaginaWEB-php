@@ -5,6 +5,7 @@
   --ligth-gray: #bebebe;
   --ligther-gray: #e6e2e2;
   --blue: #4f8be4;
+  --dark-blue: #3a6ddf; /* Añadido para el hover de la navbar */
 }
 
 * {
@@ -15,9 +16,6 @@
 
 body {
   font-family: sans-serif;
-}
-
-body {
   display: grid;
   grid-template-areas:
     "header header header header"
@@ -48,6 +46,32 @@ header {
   background-color: var(--blue);
   color: white;
   gap: 100px;
+}
+
+.navbar {
+  margin-top: 0px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: var(--dark-blue);
 }
 
 main {
@@ -174,7 +198,6 @@ footer {
   color: var(--ligther-gray);
 }
 
-
 .plot {
   color: var(--ligth-gray);
   margin-top: 16px;
@@ -184,8 +207,6 @@ footer {
 .score {
   padding-left: 10px;
 }
-
-
 
 .button {
   display: inline-block;
@@ -236,34 +257,88 @@ footer {
   cursor: pointer;
 }
 
-
-.navbar {
-  margin-top: 0px;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.navbar li {
-  display: inline;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.navbar a:hover {
-  background-color: var(--dark-blue);
-}
-
 .error {
   color: red;
   padding-bottom: 20px;
+}
+
+/* Estilos para agregar películas */
+.add-movie-container {
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 0px 10px var(--ligther-gray);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.add-movie-container h2 {
+  margin-bottom: 20px;
+  color: var(--blue);
+}
+
+.add-movie-container input,
+.add-movie-container textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--ligth-gray);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.add-movie-container button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: var(--blue);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-movie-container button:hover {
+  background-color: var(--ligther-gray);
+}
+
+/* Estilos para quitar películas */
+.remove-movie-container {
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 0px 10px var(--ligther-gray);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.remove-movie-container h2 {
+  margin-bottom: 20px;
+  color: var(--blue);
+}
+
+.remove-movie-container input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--ligth-gray);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.remove-movie-container button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: var(--blue);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.remove-movie-container button:hover {
+  background-color: var(--ligther-gray);
 }

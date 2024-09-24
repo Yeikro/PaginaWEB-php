@@ -1,8 +1,4 @@
 <?php
-// Recibir los datos del formulario de inicio de sesión
-$usser = $_POST['username'];
-$password = $_POST['password'];
-
 // Configuración de conexión a la base de datos
 $servidor = 'localhost';
 $database = 'popcorner';
@@ -13,7 +9,7 @@ $pass = '';
 $con = mysqli_connect($servidor, $usuario, $pass, $database);
 
 // Consulta para verificar el usuario
-$sql = "SELECT * FROM usuarios WHERE usuario = '$usser' AND pass = '$password'";
+$sql = "SELECT * FROM usuarios";
 $result = $con->query($sql);
 ?>
 
@@ -107,44 +103,6 @@ if ($result->num_rows > 0) {
         </html>
         <?php
     }
-} else {
-    // HTML si el usuario no está autenticado
-    ?>
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Popcorner - Películas</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-    <div class="background-overlay"></div>
-    <header>
-        <h1>PopCorner</h1>
-    </header>
-
-    <main>
-        <div class="login-container">
-            <h2>Inicia sesión o regístrate</h2>
-            <h4 class="error">Usuario o contraseña incorrecta</h4>
-            <form action="menu.php" method="post">
-                <input type="text" name="username" placeholder="Nombre de usuario" required>
-                <input type="password" name="password" placeholder="Contraseña" required>
-                <div class="button-container">
-                    <button type="submit">Iniciar Sesión</button>
-                </div>
-            </form>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Popcorner. Todos los derechos reservados.</p>
-    </footer>
-    </body>
-    </html>
-    <?php
-}
-// Cierra la conexión a la base de datos
+} 
 $con->close();
 ?>
