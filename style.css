@@ -148,7 +148,7 @@ footer {
   display: flex;
   flex-direction: column;
   width: 350px;
-  height: 450px;
+  height: auto;
   box-shadow: 0px 0px 6px var(--ligther-gray);
   border-radius: 10px;
 }
@@ -202,6 +202,7 @@ footer {
   color: var(--ligth-gray);
   margin-top: 16px;
   font-weight: bold;
+  padding-bottom: 10px;
 }
 
 .score {
@@ -333,6 +334,17 @@ footer {
   padding: 10px;
   border: none;
   background-color: var(--blue);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.remove-movie-container2 button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: rgb(249, 66, 66);
   color: white;
   border-radius: 5px;
   cursor: pointer;

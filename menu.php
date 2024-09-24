@@ -88,6 +88,10 @@ if ($result->num_rows > 0) {
                                 <!-- Mostrar la descripción de la película -->
                                 <p class="plot">
                                     <?php echo $row2['descripcion']; ?>
+                                    <form action="quitar.php" method = "POST" class = "remove-movie-container2">
+                                        <INput type = "hidden" name = "nombre" value = "<?php echo $row2['nombre']; ?>"></INput>
+                                        <button type="submit">Eliminar Película</button>
+                                    </form>
                                 </p>
                             </div>
                         </article>

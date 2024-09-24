@@ -37,6 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             $mensaje = "<p style='color: red; background-color: white; border-radius: 20px; padding: 10px; font-size: large;'>No se encontró ninguna película con ese nombre.</p>";
         }
+        header("location: menu2.php");
     } else {
         $mensaje = "<p style='color: red; background-color: white; border-radius: 20px; padding: 10px; font-size: large;'>Error al eliminar la película: " . $stmt->error . "</p>";
     }
